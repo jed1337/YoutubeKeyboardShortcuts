@@ -10,7 +10,7 @@
 
 // @require     https://code.jquery.com/jquery-3.3.1.min.js
 
-// @version     3.2
+// @version     3.3
 // @grant       none
 
 // @icon        https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png
@@ -101,8 +101,6 @@ function rebindResultsShortcuts(){
          copy(hostname+watchLink);
       },
       'P'       : function(){clickInContext("li>a:contains(View full playlist)");},
-      'N'       : function(){click("span:contains(Next)");},
-      'p'       : function(){click("span:contains(Previous)");},
    });
 }
 
@@ -123,7 +121,7 @@ function rebindPlaylistShortcuts(){
    );
 }
 
-function rebindPlaylistShortcuts(){
+function rebindWatchShortcuts(){
    if(!validPath("/watch?")){
       return;
    }
